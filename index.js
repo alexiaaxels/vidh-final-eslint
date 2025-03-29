@@ -1,4 +1,7 @@
-export const rules = {
-    "forbid-moment": (await import("./eslint-rules/moment.js")).default,
-  };
-  
+import momentRule from "./eslint-rules/moment.js";
+
+export default {
+  rules: {
+    "forbid-moment": momentRule,
+  },
+};

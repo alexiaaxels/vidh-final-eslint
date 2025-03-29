@@ -1,16 +1,15 @@
 {
-    "name": "eslint-plugin-no-moment",
-    "version": "1.0.0",
-    "type": "module",
-    "main": "index.js",
-    "exports": {
-      ".": {
-        "import": "./index.js"
-      }
-    },
-    "keywords": ["eslint", "eslintplugin", "moment", "plugin"],
-    "peerDependencies": {
-      "eslint": "^8.0.0"
+  "name": "eslint-plugin-vidh-final",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": {
+      "import": "./index.js"
     }
+  },
+  "keywords": ["eslint", "eslintplugin", "moment", "plugin"],
+  "peerDependencies": {
+    "eslint": "^8.0.0"
   }
-  
+}
