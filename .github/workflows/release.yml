@@ -1,0 +1,29 @@
+name: Release ESLint plugin
+
+on:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v3
+      
+      - name: setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: "20"
+        
+      - name: install dependencies
+        run: npm ci
+
+      - name: create github release
+        uses: softprops/action-gh-release@v1
+        with:
+          generate_release_notes: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
